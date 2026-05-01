@@ -3,6 +3,7 @@ package com.example.portfolio
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
@@ -27,17 +28,24 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 
+
+
+
 @Composable
 fun App() {
 
-    val screenwidth= LocalWindowInfo.current.containerSize.width
 
-    val ismobile= screenwidth<700
+    BoxWithConstraints {
 
-    if(ismobile)
-        PortfolioMobileUi()
-    else
-        PortfolioLaptopUi()
+
+        val ismobile = maxWidth<700.dp
+
+        if (ismobile)
+            PortfolioMobileUi()
+        else
+            PortfolioLaptopUi()
+
+    }
 
 
 }

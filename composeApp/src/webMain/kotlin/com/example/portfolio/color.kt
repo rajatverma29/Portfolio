@@ -1,0 +1,54 @@
+package com.example.portfolio
+
+import androidx.compose.ui.graphics.Color
+
+// Basic
+val Black = Color(0xFF000000)
+val White = Color(0xFFFFFFFF)
+
+// Premium Blacks
+val MatteBlack = Color(0xFF1C1C1C)
+val PremiumBlack = Color(0xFF121212)
+val JetBlack = Color(0xFF0A0A0A)
+val CarbonBlack = Color(0xFF161616)
+val RichBlack = Color(0xFF0D0D0D)
+val SoftBlack = Color(0xFF222222)
+val CharcoalBlack = Color(0xFF2B2B2B)
+
+// Gray Shades
+val Gray = Color(0xFF808080)
+val LightGray = Color(0xFFB3B3B3)
+val DarkGray = Color(0xFF2A2A2A)
+val SlateGray = Color(0xFF3A3A3A)
+val AshGray = Color(0xFF4A4A4A)
+
+// Purple Shades
+val Purple = Color(0xFF7F5AF0)
+val LightPurple = Color(0xFF9B7BFF)
+val DeepPurple = Color(0xFF5A189A)
+
+// Blue Shades
+val Blue = Color(0xFF2196F3)
+val LightBlue = Color(0xFF64B5F6)
+val NavyBlue = Color(0xFF0A192F)
+val SkyBlue = Color(0xFF38BDF8)
+
+// Green Shades
+val Green = Color(0xFF4CAF50)
+val LightGreen = Color(0xFF81C784)
+val MintGreen = Color(0xFF2CB67D)
+
+// Red & Orange
+val Red = Color(0xFFFF4C4C)
+val Orange = Color(0xFFFF8906)
+val Yellow = Color(0xFFFFC107)
+
+// Pink
+val Pink = Color(0xFFE91E63)
+
+// Cyan
+val Cyan = Color(0xFF00BCD4)
+
+// Glass Colors
+val TransparentWhite = Color.White.copy(alpha = 0.1f)
+val TransparentBlack = Color.Black.copy(alpha = 0.2f)

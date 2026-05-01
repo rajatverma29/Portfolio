@@ -21,23 +21,49 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.platform.LocalWindowInfo
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
 
 @Composable
-fun App() {
+fun PortfolioLaptopUi(){
 
-    val screenwidth= LocalWindowInfo.current.containerSize.width
+    val text="Android Developer"
+    var displayedtext by remember { mutableStateOf("") }
 
-    val ismobile= screenwidth<700
+    LaunchedEffect(Unit){
 
-    if(ismobile)
-        PortfolioMobileUi()
-    else
-        PortfolioLaptopUi()
+        for(i in 0..text.length){
 
+            displayedtext= text.substring(0,i)
+
+            delay(100)
+
+        }
+    }
+
+
+
+    MaterialTheme {
+
+        Box(Modifier.fillMaxSize().background(CarbonBlack)) {
+
+            Column(
+                modifier = Modifier
+                    .fillMaxSize()
+                    .padding(20.dp),
+
+
+                ) {
+                Text("Hi I am,", fontSize = 20.sp, fontWeight = FontWeight.SemiBold, color = Color.Gray)
+                Spacer(Modifier.height(5.dp))
+                Text("Rajat Verma", fontSize = 30.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
+                Spacer(Modifier.height(5.dp))
+                Text(displayedtext , fontSize = 45.sp, fontWeight = FontWeight.SemiBold, color = Orange)
+
+            }
+        }
+    }
 
 }

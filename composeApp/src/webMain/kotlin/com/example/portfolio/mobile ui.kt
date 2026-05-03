@@ -64,7 +64,7 @@ fun PortfolioMobileUi() {
             Text(displayedtext, fontSize = 45.sp, fontWeight = FontWeight.SemiBold, color = Orange)
 
             Button(
-                modifier= Modifier.fillMaxWidth(0.4f).height(50.dp),
+                modifier= Modifier.fillMaxWidth(0.4f).height(60.dp),
                 onClick = {},
                 shape = RoundedCornerShape(20.dp),
                 colors = ButtonDefaults.buttonColors(Orange, White)

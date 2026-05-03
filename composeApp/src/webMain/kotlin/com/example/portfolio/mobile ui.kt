@@ -67,7 +67,7 @@ fun PortfolioMobileUi() {
                 modifier= Modifier.fillMaxWidth(0.4f).height(60.dp),
                 onClick = {},
                 shape = RoundedCornerShape(20.dp),
-                colors = ButtonDefaults.buttonColors(Orange, White)
+                colors = ButtonDefaults.buttonColors(containerColor = Orange, contentColor = White)
             ) {
 
                 Text("Resume", fontSize = 20.sp)

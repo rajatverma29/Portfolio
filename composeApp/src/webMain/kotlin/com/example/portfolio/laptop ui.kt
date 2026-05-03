@@ -2,14 +2,19 @@ package com.example.portfolio
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxHeight
 import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
@@ -47,23 +52,39 @@ fun PortfolioLaptopUi(){
 
     MaterialTheme {
 
-        Box(Modifier.fillMaxSize().background(CarbonBlack)) {
+        BoxWithConstraints  (Modifier.fillMaxSize().background(CarbonBlack)) {
+
+            val toppadding = maxHeight * 0.12f
 
             Column(
                 modifier = Modifier
                     .fillMaxSize()
-                    .padding(horizontal = 50.dp, vertical = 20.dp)
+                    .padding(top = toppadding, start = 20.dp, end = 20.dp, bottom = 20.dp)
                     .verticalScroll(rememberScrollState())
                     ,
 
 
                 ) {
-                Spacer(Modifier.fillMaxHeight(0.11f))
+
                 Text("Hi I am,", fontSize = 25.sp, fontWeight = FontWeight.SemiBold, color = Color.Gray)
                 Spacer(Modifier.height(5.dp))
                 Text("Rajat Verma", fontSize = 40.sp, fontWeight = FontWeight.Bold, color = Color.Gray)
                 Spacer(Modifier.height(5.dp))
                 Text(displayedtext , fontSize = 60.sp, fontWeight = FontWeight.SemiBold, color = Orange)
+
+                Spacer(Modifier.height(20.dp))
+
+                Button(
+                    modifier= Modifier.fillMaxWidth(0.2f).height(60.dp)
+                       ,
+                    onClick = {},
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(containerColor = Orange, contentColor = White)
+                ) {
+
+                    Text("Resume", fontSize = 20.sp)
+                }
+
 
             }
             TopBar(clicked = {},false)

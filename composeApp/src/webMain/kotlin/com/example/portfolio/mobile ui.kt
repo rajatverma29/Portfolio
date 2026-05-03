@@ -11,6 +11,7 @@ import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
@@ -52,13 +53,13 @@ fun PortfolioMobileUi() {
         }
     }
 
-    BoxWithConstraints(Modifier.fillMaxSize().background(CarbonBlack)) {
+    BoxWithConstraints(Modifier.fillMaxSize().background(CarbonBlack).verticalScroll(rememberScrollState())) {
 
         val toppadding = maxHeight * 0.12f
         Column(
             modifier = Modifier.fillMaxSize()
                 .padding(top = toppadding, start = 20.dp, end = 20.dp, bottom = 20.dp)
-                .verticalScroll(rememberScrollState()),
+                ,
             horizontalAlignment = Alignment.CenterHorizontally
 
         ) {
@@ -71,7 +72,7 @@ fun PortfolioMobileUi() {
 
             Spacer(Modifier.height(20.dp))
 
-            Image(painterResource(Res.drawable.profilephoto), contentDescription = null)
+            Image(painterResource(Res.drawable.profilephoto), contentDescription = null, Modifier.size(800.dp))
 
             Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween
             ) {

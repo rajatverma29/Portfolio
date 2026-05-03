@@ -1,5 +1,6 @@
 package com.example.portfolio
 
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
@@ -29,6 +30,9 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import kotlinx.coroutines.delay
+import org.jetbrains.compose.resources.painterResource
+import portfolio.composeapp.generated.resources.Res
+import portfolio.composeapp.generated.resources.profilephoto
 
 @Composable
 fun PortfolioMobileUi() {
@@ -67,7 +71,10 @@ fun PortfolioMobileUi() {
 
             Spacer(Modifier.height(20.dp))
 
-            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
+            Image(painterResource(Res.drawable.profilephoto), contentDescription = null)
+
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceBetween
+            ) {
 
                 Button(
                     modifier = Modifier.fillMaxWidth(0.35f).height(50.dp),

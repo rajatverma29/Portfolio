@@ -1,8 +1,10 @@
 package com.example.portfolio
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.BoxWithConstraints
 import androidx.compose.foundation.layout.Column
+import androidx.compose.foundation.layout.Row
 import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -63,14 +65,34 @@ fun PortfolioMobileUi() {
             Spacer(Modifier.height(5.dp))
             Text(displayedtext, fontSize = 45.sp, fontWeight = FontWeight.SemiBold, color = Orange)
 
-            Button(
-                modifier= Modifier.fillMaxWidth(0.4f).height(60.dp),
-                onClick = {},
-                shape = RoundedCornerShape(20.dp),
-                colors = ButtonDefaults.buttonColors(containerColor = Orange, contentColor = White)
-            ) {
+            Spacer(Modifier.height(20.dp))
 
-                Text("Resume", fontSize = 20.sp)
+            Row(Modifier.fillMaxWidth(), verticalAlignment = Alignment.CenterVertically, horizontalArrangement = Arrangement.SpaceEvenly) {
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(0.35f).height(50.dp),
+                    onClick = {},
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Orange,
+                        contentColor = White
+                    )
+                ) {
+
+                    Text("Resume", fontSize = 20.sp)
+                }
+
+                Button(
+                    modifier = Modifier.fillMaxWidth(0.35f).height(50.dp),
+                    onClick = {},
+                    shape = RoundedCornerShape(20.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = Gray,
+                        contentColor = White,
+                    )
+                ) {
+                    Text("Contact", fontSize = 20.sp)
+                }
             }
 
         }
